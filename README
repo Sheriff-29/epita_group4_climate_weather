@@ -1,0 +1,36 @@
+# Climate & Weather API Project
+
+## Group 4 – Engineering Tools TP2
+
+### Objective
+Develop a Python application that retrieves
+live weather information using WeatherAPI.
+
+### Technologies
+- Python 3
+- WeatherAPI
+- Requests library
+- REST API (GET method)
+- JSON
+
+### Features
+- Accepts a city name from the user.
+- Sends a GET request to WeatherAPI.
+- Retrieves live weather information.
+- Displays temperature, condition, humidity and wind speed.
+- Handles API and connection errors.
+
+### How to Run
+
+Install dependencies:
+
+pip install requests
+
+Run the application:
+
+python weather.py
+
+### Tested Cities
+- Paris
+- London
+- Dubai
