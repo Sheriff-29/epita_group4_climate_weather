@@ -1,6 +1,7 @@
 [project]
 name = "epita-meeran-sheriff-group4-weather"
 version = "0.1.0"
+readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "python-dotenv>=1.2.4",
@@ -12,5 +13,13 @@ dependencies = [
 [dependency-groups]
 dev = [
     "build>=1.6.1",
+    "hatchling>=1.33.0",
     "twine>=6.2.0",
 ]
+[project.scripts]
+weather-app = "weather_app.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/weather_app"]
+[tool.uv]
+package = true

@@ -1,72 +1,84 @@
-# Climate & Weather API Project
+Climate & Weather API Project
 
-## Group 4 – Engineering Tools TP2
+EPITA Engineering Tools TP2 — Group 4
 
-### Objective
+A Python command-line application that retrieves live weather information using the WeatherAPI service.
 
-Develop a Python application that retrieves live weather information using WeatherAPI.
+Features
 
-### Technologies
+* Retrieves real-time weather information.
+* Accepts city names through command-line arguments.
+* Displays results using formatted Rich tables.
+* Handles invalid cities and API connection errors.
+* Loads API credentials securely from environment variables.
+* Uses an isolated Python environment managed by uv.
 
-- Python 3
-- WeatherAPI
-- Requests library
-- REST API (GET method)
-- JSON
+Technologies
 
-### Features
+* Python 3.14+
+* uv
+* WeatherAPI
+* Requests
+* python-dotenv
+* Rich
+* Hatchling
 
-- Accepts a city name from the user.
-- Sends a GET request to WeatherAPI.
-- Retrieves live weather information.
-- Displays temperature, weather condition, humidity and wind speed.
-- Handles API and connection errors.
+Project Structure
 
-## Installation
+src/
+└── weather_app/
+    ├── __init__.py
+    ├── config.py
+    ├── client.py
+    └── cli.py
+.env
+.env.template
+.gitignore
+pyproject.toml
+uv.lock
+README.md
 
-### 1. Clone the repository
+Installation
 
-```bash
-git clone https://github.com/Sheriff-29/epita_group4_climate_weather.git
-cd epita_group4_climate_weather
-```
+Install dependencies:
 
-### 2. Install Python dependencies
+uv sync
 
-```bash
-python3 -m pip install -r requirements.txt
-```
+Create a .env file in the project root:
 
-### 3. Configure the WeatherAPI key
+WEATHER_API_KEY=your_api_key_here
 
-The application requires a valid WeatherAPI key.
+Obtain an API key from WeatherAPI.
 
-Keep your API key private. Do not write it in this README, commit it to Git, or share it publicly.
+Usage
 
-Follow the API-key configuration method already used in `weather.py`.
+Check weather for a city:
 
-## How to Run
+uv run weather-app Paris
 
-Run the application using:
+Display command help:
 
-```bash
-python3 weather.py
-```
+uv run weather-app --help
 
-Enter a city name when prompted.
+Security
 
-## Tested Cities
+API credentials are stored in .env and are excluded from Git using .gitignore. The .env.template file provides a placeholder for configuration.
 
-- Paris
-- London
-- Dubai
+Never commit your actual API key.
 
-## Dependencies
+Packaging
 
-The required Python packages are listed in `requirements.txt`.
+Build the source distribution and wheel:
 
-Install them using:
+uv build
 
-```bash
-python3 -m pip install -r requirements.txt
-```
+Validate the packages:
+
+uv run python -m twine check dist/*
+
+Project Information
+
+* Course: Engineering Tools TP2
+* Group: 4
+* Domain: Climate & Weather
+* API: WeatherAPI
