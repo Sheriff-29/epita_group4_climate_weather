@@ -3,10 +3,11 @@
 ## Group 4 – Engineering Tools TP2
 
 ### Objective
-Develop a Python application that retrieves
-live weather information using WeatherAPI.
+
+Develop a Python application that retrieves live weather information using WeatherAPI.
 
 ### Technologies
+
 - Python 3
 - WeatherAPI
 - Requests library
@@ -14,23 +15,58 @@ live weather information using WeatherAPI.
 - JSON
 
 ### Features
+
 - Accepts a city name from the user.
 - Sends a GET request to WeatherAPI.
 - Retrieves live weather information.
-- Displays temperature, condition, humidity and wind speed.
+- Displays temperature, weather condition, humidity and wind speed.
 - Handles API and connection errors.
 
-### How to Run
+## Installation
 
-Install dependencies:
+### 1. Clone the repository
 
-pip install requests
+```bash
+git clone https://github.com/Sheriff-29/epita_group4_climate_weather.git
+cd epita_group4_climate_weather
+```
 
-Run the application:
+### 2. Install Python dependencies
 
-python weather.py
+```bash
+python3 -m pip install -r requirements.txt
+```
 
-### Tested Cities
+### 3. Configure the WeatherAPI key
+
+The application requires a valid WeatherAPI key.
+
+Keep your API key private. Do not write it in this README, commit it to Git, or share it publicly.
+
+Follow the API-key configuration method already used in `weather.py`.
+
+## How to Run
+
+Run the application using:
+
+```bash
+python3 weather.py
+```
+
+Enter a city name when prompted.
+
+## Tested Cities
+
 - Paris
 - London
 - Dubai
+
+## Dependencies
+
+The required Python packages are listed in `requirements.txt`.
+
+Install them using:
+
+```bash
+python3 -m pip install -r requirements.txt
+```
